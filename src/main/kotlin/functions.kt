@@ -117,6 +117,11 @@ fun <T> asList(vararg ts: T): List<T> {
     return result
 }
 
+/*
+* Practical Example
+* When creating a book instance, a book might have more than one category,
+* in that case, we can use vararg to make it more fun.
+* */
 fun <T> createBook(title: String, price: Double, vararg categories: T): Any {
 
     return object {
@@ -137,7 +142,7 @@ fun testVarargsTester() {
 
 /*
 * Infix notation
-* either function is a extension function or a member function
+* either function is an extension function or a member function
 * */
 infix fun String.cato(name: String): String {
     return "Hey cato $name"
